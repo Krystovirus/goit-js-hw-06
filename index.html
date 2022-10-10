@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/1.1.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css" />
     <title>JS-HW-06</title>
 </head>
 <body>
 
     <section class="section task-first">
+
         <ul id="categories">
             <li class="item">
               <h2>Animals</h2>
@@ -41,27 +44,34 @@
     </section>
 
     <section class="section task-second">
+
         <ul id="ingredients"></ul>
     </section>
 
     <section class="section task-third">
+
         <ul class="gallery"></ul>
     </section>
 
     <section class="section task-forth">
+
         <div id="counter">
-            <button type="button" data-action="decrement">-1</button>
+            <button type="button" data-action="decrement"><span>-1</span>
+              <div class="liquid"></div></button>
             <span id="value">0</span>
-            <button type="button" data-action="increment">+1</button>
+            <button type="button" data-action="increment"><span>+1</span>
+              <div class="liquid"></div></button>
           </div>
     </section>
 
     <section class="section task-fifth">
+
         <input type="text" id="name-input" placeholder="Please enter your name" />
         <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
     </section>
 
     <section class="section task-sixth">
+
         <input
             type="text"
             id="validation-input"
@@ -71,40 +81,50 @@
     </section>
 
     <section class="section task-seventh">
+
         <input id="font-size-control" type="range" min="16" max="96" />
         <br />
         <span id="text">Abracadabra!</span>
     </section>
 
     <section class="section task-eighth">
+
         <form class="login-form">
             <label>
               Email
-              <input type="email" name="email" />
+              <input class="email" type="email" name="email" />
             </label>
             <label>
               Password
-              <input type="password" name="password" />
+              <input class="password" type="password" name="password" />
             </label>
-            <button type="submit">Login</button>
+            <button type="submit"><span>Login</span>
+              <div class="liquid"></div></button>
           </form>
     </section>
 
     <section class="section task-ninth">
+
         <div class="widget">
             <p>Background color: <span class="color">-</span></p>
-            <button type="button" class="change-color">Change color</button>
+            <button type="button" class="change-color"><span>Change color</span>
+              <div class="liquid"></div></button>
           </div>
     </section>
 
     <section class="section task-tenth">
+
         <div id="controls">
-            <input type="number" min="1" max="100" step="1" />
-            <button type="button" data-create>Create</button>
-            <button type="button" data-destroy>Destroy</button>
+            <input class="digits" type="number" min="1" max="100" step="1" />
+            <button type="button" data-create><span>Create</span>
+              <div class="liquid"></div></button>
+            <button type="button" data-destroy><span>Destroy</span>
+              <div class="liquid"></div></button>
           </div>
           
           <div id="boxes"></div>
     </section>
+
+    <script src="./main.js" type="module"></script>
 </body>
 </html>
