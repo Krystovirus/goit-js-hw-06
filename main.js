@@ -94,8 +94,6 @@ const decrCounter = function () {
   decrement.addEventListener('click', decrCounter);
   increment.addEventListener('click', incrCounter);
 
-console.log(counterValue);
-
 //task 5
 
 const inputRef = document.querySelector("#name-input");
@@ -108,7 +106,9 @@ inputRef.addEventListener("input", (event) => {
   }
 });
 
+
 //task 6
+
 const validationInput = document.querySelector("#validation-input");
 
 validationInput.addEventListener("blur", (event) => {
@@ -124,3 +124,109 @@ validationInput.addEventListener("blur", (event) => {
       }
 });
 
+//task 7
+
+const inputScroll = document.querySelector('#font-size-control');
+const magicSpan = document.querySelector('#text');
+
+
+inputScroll.addEventListener('change', (event) => {
+    magicSpan.style.fontSize = event.target.value+'px';
+});
+
+//task 8
+
+const formRef = document.querySelector('.login-form');
+
+formRef.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
+
+  if (email.value === '' || password.value === '') {
+    return alert('Attention! All registration fields must be filled!');
+  }
+
+  const usersInform = { email: email.value, password: password.value };
+
+  console.log(usersInform);
+  event.currentTarget.reset();
+};
+
+//task 9
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+};
+
+const kaleidoscope = {
+  button: document.querySelector("button.change-color"),
+  body: document.body,
+  colorInd: document.querySelector("span.color"),
+};
+kaleidoscope.button.addEventListener("click", handleClickBtn);
+
+function handleClickBtn() {
+  const bcgColor = getRandomHexColor();
+  kaleidoscope.body.style.backgroundColor = bcgColor;
+  kaleidoscope.colorInd.textContent = bcgColor;
+};
+
+// task 10
+
+const btnCreateRef = document.querySelector('[data-create]');
+const btnDestroyRef = document.querySelector('[data-destroy]');
+const amountBoxesRef = document.querySelector('input');
+const boxesRef = document.querySelector('#boxes');
+const newBoxes = [];
+
+amountBoxesRef.addEventListener('input', totalBoxes);
+function totalBoxes(event) {
+  return event.currentTarget.value;
+}
+// console.log(amountBoxesRef);
+
+const piramida = {
+  bricks: document.querySelector("div#boxes"),
+  inputAmount: document.querySelector('input[type="number"]'),
+  buttonCreator: document.querySelector("button[data-create]"),
+  buttonDestroyer: document.querySelector("button[data-destroy]"),
+};
+
+const getListMarkup = (idx) => `<div class="item"
+ style="width: ${30 + 10 * idx}px; height: ${
+  30 + 10 * idx
+}px; background-color: ${getRandomHexColor()}"></div>`;
+
+const brickItemsBuilder = (amount) =>
+  Array(amount)
+    .fill("")
+    .map((_, i) => getListMarkup(i))
+    .join("");
+
+piramida.buttonCreator.addEventListener("click", toCreate);
+piramida.buttonDestroyer.addEventListener("click", toDestroy);
+
+function toCreate() {
+  clearBoxes();
+  createBoxes(Number(piramida.inputAmount.value));
+}
+
+function toDestroy() {
+  clearBoxes();
+}
+
+function createBoxes(amount) {
+  piramida.bricks.insertAdjacentHTML("afterbegin", brickItemsBuilder(amount));
+}
+
+function clearBoxes() {
+  while (piramida.bricks.childNodes.length > 0) {
+    piramida.bricks.firstChild.remove();
+  }
+};

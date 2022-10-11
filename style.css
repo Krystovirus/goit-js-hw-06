@@ -50,6 +50,17 @@
       border-radius: 16px;
   }
 
+    .task-seventh{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #font-size-control {
+        width: 160px;
+    }
+
   body:last-child {margin-bottom: 90px;}
   
   button {
@@ -122,12 +133,25 @@
     }
   }
 
+.change-color .liquid{
+    width: 220px;
+    height: 220px;
+}
+
+.change-color{
+    width: 220px;
+}
+
   #counter {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
     font-size: large;
+  }
+
+  .task-forth button {
+      width: 128px;
   }
 
   .task-fifth {
