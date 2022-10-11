@@ -189,7 +189,6 @@ amountBoxesRef.addEventListener('input', totalBoxes);
 function totalBoxes(event) {
   return event.currentTarget.value;
 }
-// console.log(amountBoxesRef);
 
 const piramida = {
   bricks: document.querySelector("div#boxes"),
