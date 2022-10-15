@@ -8,8 +8,8 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
+  background-color: #2F303A;
+  color: #2196F3;
   line-height: 1.5;
 }
 
@@ -21,4 +21,72 @@ input {
 button {
   padding: 8px 12px;
   cursor: pointer;
+}
+
+.task-second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 36px;
+  height: 761px;
+  align-items: center;
+  width: 1600px;
+  padding-left: 0;
+}
+
+.gallery-element{
+  list-style: none;   
+}
+
+.gallery-img {
+  border-radius: 16px;
+}
+
+.go-back {
+  align-self: flex-start;
+  margin-bottom: 90px;
+}
+
+.go-back-link{
+  color: #4973ff;
+}
+
+.validator , .magestic, .anon-name, .log-in , .optional {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputs {
+  border-radius: 21px;
+}
+
+.login-form {
+  width: 233px;
+}
+
+.widget{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.optional{
+  background: #000;
 }

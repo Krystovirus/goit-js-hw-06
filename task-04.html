@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 4</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="css/common.css" />
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
+    <p class="go-back"><a class="go-back-link" href="index.html">Go back</a></p>
 
     <div id="counter">
-      <button type="button" data-action="decrement">-1</button>
+      <button type="button" data-action="decrement"><span>-1</span>
+        <div class="liquid"></div></button>
       <span id="value">0</span>
-      <button type="button" data-action="increment">+1</button>
+      <button type="button" data-action="increment"><span>+1</span>
+        <div class="liquid"></div></button>
     </div>
 
     <script src="js/task-04.js" type="module"></script>
