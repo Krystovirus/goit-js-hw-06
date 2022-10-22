@@ -1,8 +1,9 @@
-const amount = document.querySelectorAll(".item").length;
-console.log(`Number of categories: ${amount}`);
+const amountOfCategories = document.querySelectorAll('.item');
+console.log(`Number of categories: ${amountOfCategories.length}`);
 
-const elelementsTitle = document.querySelectorAll("h2");
-for (let element of elelementsTitle) {
-  console.log("Category:", element.textContent);
-  console.log("Elements:", element.nextElementSibling.children.length);
-}
+const CounterRef = [...amountOfCategories]
+.map(categories => `Category: ${categories.firstElementChild.textContent}
+Elements: ${categories.lastElementChild.children.length}`)
+.join('\n')
+
+console.log(CounterRef);
